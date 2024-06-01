@@ -1,5 +1,9 @@
 def benchmark
-  # Your benchmarking code goes here.
+  start_time = Time.now  # Capture the start time
+  yield                  # Execute the block
+  end_time = Time.now    # Capture the end time
+  running_time = end_time - start_time  # Calculate the running time
+  running_time
 end
  
 # Be careful, pasting this into IRB will take a long time to print.
